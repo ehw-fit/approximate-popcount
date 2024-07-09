@@ -1,0 +1,163 @@
+// 
+// This code is a part of TNNApprox library distributed under The MIT License.
+// When used, please cite the following article: V. Mrazek, A. Kokkinis, P. Papanikolaou, Z. Vasicek, K. Siozis, G. Tzimpragos, M. Tahoori, G. Zervakis "Evolutionary Approximation of Ternary Neurons \for On-sensor Printed Neural Networks" International Conference on Computer Aided Design (ICCAD), 2024
+// 
+// MAE=1.66924
+// WCE=9.0
+// EP=0.814529%
+// Printed PDK parameters:
+//  Area=0.0
+//  Delay=0.0
+//  Power=0.0
+
+module popcount19_6vv5(input [18:0] input_a, output [4:0] popcount19_6vv5_out);
+  wire popcount19_6vv5_core_021;
+  wire popcount19_6vv5_core_022;
+  wire popcount19_6vv5_core_023;
+  wire popcount19_6vv5_core_024;
+  wire popcount19_6vv5_core_025;
+  wire popcount19_6vv5_core_026;
+  wire popcount19_6vv5_core_027;
+  wire popcount19_6vv5_core_028;
+  wire popcount19_6vv5_core_031;
+  wire popcount19_6vv5_core_033;
+  wire popcount19_6vv5_core_035;
+  wire popcount19_6vv5_core_038;
+  wire popcount19_6vv5_core_041;
+  wire popcount19_6vv5_core_043;
+  wire popcount19_6vv5_core_046;
+  wire popcount19_6vv5_core_050;
+  wire popcount19_6vv5_core_052_not;
+  wire popcount19_6vv5_core_053;
+  wire popcount19_6vv5_core_054;
+  wire popcount19_6vv5_core_057;
+  wire popcount19_6vv5_core_060;
+  wire popcount19_6vv5_core_061;
+  wire popcount19_6vv5_core_062;
+  wire popcount19_6vv5_core_065;
+  wire popcount19_6vv5_core_069;
+  wire popcount19_6vv5_core_071;
+  wire popcount19_6vv5_core_072;
+  wire popcount19_6vv5_core_073;
+  wire popcount19_6vv5_core_074;
+  wire popcount19_6vv5_core_076;
+  wire popcount19_6vv5_core_078;
+  wire popcount19_6vv5_core_079;
+  wire popcount19_6vv5_core_081;
+  wire popcount19_6vv5_core_082;
+  wire popcount19_6vv5_core_083;
+  wire popcount19_6vv5_core_084;
+  wire popcount19_6vv5_core_085;
+  wire popcount19_6vv5_core_086;
+  wire popcount19_6vv5_core_087;
+  wire popcount19_6vv5_core_089;
+  wire popcount19_6vv5_core_091;
+  wire popcount19_6vv5_core_094;
+  wire popcount19_6vv5_core_095;
+  wire popcount19_6vv5_core_096_not;
+  wire popcount19_6vv5_core_097;
+  wire popcount19_6vv5_core_098;
+  wire popcount19_6vv5_core_099;
+  wire popcount19_6vv5_core_101;
+  wire popcount19_6vv5_core_103;
+  wire popcount19_6vv5_core_104;
+  wire popcount19_6vv5_core_105;
+  wire popcount19_6vv5_core_108;
+  wire popcount19_6vv5_core_109_not;
+  wire popcount19_6vv5_core_111;
+  wire popcount19_6vv5_core_112;
+  wire popcount19_6vv5_core_114;
+  wire popcount19_6vv5_core_115;
+  wire popcount19_6vv5_core_116;
+  wire popcount19_6vv5_core_117;
+  wire popcount19_6vv5_core_118;
+  wire popcount19_6vv5_core_119;
+  wire popcount19_6vv5_core_120;
+  wire popcount19_6vv5_core_121;
+  wire popcount19_6vv5_core_122;
+  wire popcount19_6vv5_core_123;
+  wire popcount19_6vv5_core_125;
+  wire popcount19_6vv5_core_127;
+  wire popcount19_6vv5_core_128;
+  wire popcount19_6vv5_core_130;
+  wire popcount19_6vv5_core_134;
+  wire popcount19_6vv5_core_135;
+
+  assign popcount19_6vv5_core_021 = input_a[12] ^ input_a[11];
+  assign popcount19_6vv5_core_022 = ~(input_a[11] ^ input_a[3]);
+  assign popcount19_6vv5_core_023 = ~(input_a[17] & input_a[8]);
+  assign popcount19_6vv5_core_024 = ~(input_a[16] ^ input_a[13]);
+  assign popcount19_6vv5_core_025 = input_a[0] ^ input_a[0];
+  assign popcount19_6vv5_core_026 = input_a[17] ^ input_a[17];
+  assign popcount19_6vv5_core_027 = input_a[14] & input_a[4];
+  assign popcount19_6vv5_core_028 = ~(input_a[9] ^ input_a[18]);
+  assign popcount19_6vv5_core_031 = ~(input_a[5] & input_a[18]);
+  assign popcount19_6vv5_core_033 = ~(input_a[9] ^ input_a[3]);
+  assign popcount19_6vv5_core_035 = input_a[10] | input_a[9];
+  assign popcount19_6vv5_core_038 = input_a[18] | input_a[1];
+  assign popcount19_6vv5_core_041 = ~(input_a[4] ^ input_a[4]);
+  assign popcount19_6vv5_core_043 = input_a[16] & input_a[9];
+  assign popcount19_6vv5_core_046 = ~(input_a[15] | input_a[17]);
+  assign popcount19_6vv5_core_050 = ~input_a[8];
+  assign popcount19_6vv5_core_052_not = ~input_a[6];
+  assign popcount19_6vv5_core_053 = input_a[15] ^ input_a[0];
+  assign popcount19_6vv5_core_054 = input_a[14] & input_a[16];
+  assign popcount19_6vv5_core_057 = ~(input_a[11] & input_a[1]);
+  assign popcount19_6vv5_core_060 = ~input_a[11];
+  assign popcount19_6vv5_core_061 = input_a[1] & input_a[8];
+  assign popcount19_6vv5_core_062 = ~(input_a[7] | input_a[12]);
+  assign popcount19_6vv5_core_065 = input_a[12] & input_a[2];
+  assign popcount19_6vv5_core_069 = input_a[10] ^ input_a[15];
+  assign popcount19_6vv5_core_071 = input_a[17] ^ input_a[0];
+  assign popcount19_6vv5_core_072 = input_a[11] & input_a[0];
+  assign popcount19_6vv5_core_073 = input_a[5] | input_a[15];
+  assign popcount19_6vv5_core_074 = ~input_a[5];
+  assign popcount19_6vv5_core_076 = ~(input_a[4] & input_a[6]);
+  assign popcount19_6vv5_core_078 = ~input_a[1];
+  assign popcount19_6vv5_core_079 = ~(input_a[17] & input_a[4]);
+  assign popcount19_6vv5_core_081 = input_a[5] ^ input_a[2];
+  assign popcount19_6vv5_core_082 = ~(input_a[1] | input_a[15]);
+  assign popcount19_6vv5_core_083 = input_a[8] | input_a[13];
+  assign popcount19_6vv5_core_084 = ~input_a[8];
+  assign popcount19_6vv5_core_085 = input_a[14] ^ input_a[13];
+  assign popcount19_6vv5_core_086 = input_a[14] & input_a[7];
+  assign popcount19_6vv5_core_087 = ~(input_a[12] | input_a[8]);
+  assign popcount19_6vv5_core_089 = input_a[18] ^ input_a[1];
+  assign popcount19_6vv5_core_091 = ~input_a[1];
+  assign popcount19_6vv5_core_094 = input_a[8] | input_a[1];
+  assign popcount19_6vv5_core_095 = input_a[10] | input_a[13];
+  assign popcount19_6vv5_core_096_not = ~input_a[13];
+  assign popcount19_6vv5_core_097 = input_a[0] ^ input_a[13];
+  assign popcount19_6vv5_core_098 = ~input_a[18];
+  assign popcount19_6vv5_core_099 = ~(input_a[13] ^ input_a[9]);
+  assign popcount19_6vv5_core_101 = ~(input_a[18] & input_a[18]);
+  assign popcount19_6vv5_core_103 = input_a[9] ^ input_a[13];
+  assign popcount19_6vv5_core_104 = ~input_a[3];
+  assign popcount19_6vv5_core_105 = input_a[13] ^ input_a[12];
+  assign popcount19_6vv5_core_108 = input_a[10] | input_a[15];
+  assign popcount19_6vv5_core_109_not = ~input_a[8];
+  assign popcount19_6vv5_core_111 = ~(input_a[9] ^ input_a[6]);
+  assign popcount19_6vv5_core_112 = ~(input_a[1] & input_a[17]);
+  assign popcount19_6vv5_core_114 = ~input_a[16];
+  assign popcount19_6vv5_core_115 = ~input_a[13];
+  assign popcount19_6vv5_core_116 = ~(input_a[2] ^ input_a[2]);
+  assign popcount19_6vv5_core_117 = ~(input_a[0] ^ input_a[9]);
+  assign popcount19_6vv5_core_118 = ~(input_a[7] ^ input_a[9]);
+  assign popcount19_6vv5_core_119 = input_a[8] & input_a[11];
+  assign popcount19_6vv5_core_120 = input_a[2] | input_a[1];
+  assign popcount19_6vv5_core_121 = input_a[0] | input_a[5];
+  assign popcount19_6vv5_core_122 = ~input_a[3];
+  assign popcount19_6vv5_core_123 = input_a[9] ^ input_a[11];
+  assign popcount19_6vv5_core_125 = input_a[14] | input_a[0];
+  assign popcount19_6vv5_core_127 = input_a[13] | input_a[3];
+  assign popcount19_6vv5_core_128 = input_a[0] ^ input_a[12];
+  assign popcount19_6vv5_core_130 = ~input_a[9];
+  assign popcount19_6vv5_core_134 = input_a[5] | input_a[12];
+  assign popcount19_6vv5_core_135 = input_a[8] & input_a[15];
+
+  assign popcount19_6vv5_out[0] = input_a[18];
+  assign popcount19_6vv5_out[1] = input_a[4];
+  assign popcount19_6vv5_out[2] = 1'b0;
+  assign popcount19_6vv5_out[3] = 1'b1;
+  assign popcount19_6vv5_out[4] = 1'b0;
+endmodule

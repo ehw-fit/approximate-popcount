@@ -1,0 +1,165 @@
+// 
+// This code is a part of TNNApprox library distributed under The MIT License.
+// When used, please cite the following article: V. Mrazek, A. Kokkinis, P. Papanikolaou, Z. Vasicek, K. Siozis, G. Tzimpragos, M. Tahoori, G. Zervakis "Evolutionary Approximation of Ternary Neurons \for On-sensor Printed Neural Networks" International Conference on Computer Aided Design (ICCAD), 2024
+// 
+// MAE=3.8597
+// WCE=16.0
+// EP=0.929614%
+// Printed PDK parameters:
+//  Area=0.0
+//  Delay=0.0
+//  Power=0.0
+
+module popcount20_nadx(input [19:0] input_a, output [4:0] popcount20_nadx_out);
+  wire popcount20_nadx_core_022;
+  wire popcount20_nadx_core_026;
+  wire popcount20_nadx_core_030;
+  wire popcount20_nadx_core_031;
+  wire popcount20_nadx_core_032;
+  wire popcount20_nadx_core_034;
+  wire popcount20_nadx_core_035;
+  wire popcount20_nadx_core_038;
+  wire popcount20_nadx_core_039;
+  wire popcount20_nadx_core_042;
+  wire popcount20_nadx_core_043;
+  wire popcount20_nadx_core_045;
+  wire popcount20_nadx_core_046;
+  wire popcount20_nadx_core_047;
+  wire popcount20_nadx_core_049;
+  wire popcount20_nadx_core_051;
+  wire popcount20_nadx_core_052;
+  wire popcount20_nadx_core_053;
+  wire popcount20_nadx_core_056;
+  wire popcount20_nadx_core_057;
+  wire popcount20_nadx_core_059;
+  wire popcount20_nadx_core_060;
+  wire popcount20_nadx_core_061;
+  wire popcount20_nadx_core_062_not;
+  wire popcount20_nadx_core_064;
+  wire popcount20_nadx_core_065;
+  wire popcount20_nadx_core_066;
+  wire popcount20_nadx_core_067;
+  wire popcount20_nadx_core_069;
+  wire popcount20_nadx_core_070;
+  wire popcount20_nadx_core_071_not;
+  wire popcount20_nadx_core_072;
+  wire popcount20_nadx_core_073;
+  wire popcount20_nadx_core_079;
+  wire popcount20_nadx_core_080;
+  wire popcount20_nadx_core_081;
+  wire popcount20_nadx_core_082;
+  wire popcount20_nadx_core_086;
+  wire popcount20_nadx_core_088;
+  wire popcount20_nadx_core_090;
+  wire popcount20_nadx_core_091;
+  wire popcount20_nadx_core_093;
+  wire popcount20_nadx_core_094;
+  wire popcount20_nadx_core_095;
+  wire popcount20_nadx_core_100;
+  wire popcount20_nadx_core_103;
+  wire popcount20_nadx_core_104;
+  wire popcount20_nadx_core_105;
+  wire popcount20_nadx_core_107;
+  wire popcount20_nadx_core_109;
+  wire popcount20_nadx_core_112;
+  wire popcount20_nadx_core_113_not;
+  wire popcount20_nadx_core_114;
+  wire popcount20_nadx_core_117;
+  wire popcount20_nadx_core_118_not;
+  wire popcount20_nadx_core_119;
+  wire popcount20_nadx_core_120;
+  wire popcount20_nadx_core_121;
+  wire popcount20_nadx_core_122;
+  wire popcount20_nadx_core_123;
+  wire popcount20_nadx_core_124;
+  wire popcount20_nadx_core_127;
+  wire popcount20_nadx_core_128;
+  wire popcount20_nadx_core_130;
+  wire popcount20_nadx_core_131;
+  wire popcount20_nadx_core_132;
+  wire popcount20_nadx_core_133;
+  wire popcount20_nadx_core_134;
+  wire popcount20_nadx_core_138;
+  wire popcount20_nadx_core_139_not;
+  wire popcount20_nadx_core_144;
+  wire popcount20_nadx_core_145;
+
+  assign popcount20_nadx_core_022 = input_a[2] ^ input_a[7];
+  assign popcount20_nadx_core_026 = ~input_a[8];
+  assign popcount20_nadx_core_030 = ~input_a[10];
+  assign popcount20_nadx_core_031 = input_a[19] & input_a[17];
+  assign popcount20_nadx_core_032 = ~input_a[1];
+  assign popcount20_nadx_core_034 = input_a[17] | input_a[9];
+  assign popcount20_nadx_core_035 = input_a[11] | input_a[18];
+  assign popcount20_nadx_core_038 = ~(input_a[10] ^ input_a[9]);
+  assign popcount20_nadx_core_039 = input_a[14] | input_a[10];
+  assign popcount20_nadx_core_042 = ~(input_a[14] & input_a[4]);
+  assign popcount20_nadx_core_043 = ~(input_a[6] | input_a[12]);
+  assign popcount20_nadx_core_045 = input_a[9] & input_a[3];
+  assign popcount20_nadx_core_046 = ~(input_a[12] ^ input_a[7]);
+  assign popcount20_nadx_core_047 = input_a[6] | input_a[0];
+  assign popcount20_nadx_core_049 = ~input_a[11];
+  assign popcount20_nadx_core_051 = input_a[5] | input_a[6];
+  assign popcount20_nadx_core_052 = input_a[17] | input_a[16];
+  assign popcount20_nadx_core_053 = ~(input_a[4] & input_a[13]);
+  assign popcount20_nadx_core_056 = ~(input_a[8] | input_a[17]);
+  assign popcount20_nadx_core_057 = input_a[7] | input_a[4];
+  assign popcount20_nadx_core_059 = input_a[2] | input_a[14];
+  assign popcount20_nadx_core_060 = input_a[14] & input_a[10];
+  assign popcount20_nadx_core_061 = input_a[15] & input_a[4];
+  assign popcount20_nadx_core_062_not = ~input_a[1];
+  assign popcount20_nadx_core_064 = input_a[7] & input_a[4];
+  assign popcount20_nadx_core_065 = ~(input_a[1] ^ input_a[3]);
+  assign popcount20_nadx_core_066 = ~(input_a[2] ^ input_a[17]);
+  assign popcount20_nadx_core_067 = input_a[0] & input_a[11];
+  assign popcount20_nadx_core_069 = input_a[13] ^ input_a[4];
+  assign popcount20_nadx_core_070 = input_a[19] | input_a[0];
+  assign popcount20_nadx_core_071_not = ~input_a[16];
+  assign popcount20_nadx_core_072 = input_a[6] | input_a[8];
+  assign popcount20_nadx_core_073 = input_a[5] | input_a[7];
+  assign popcount20_nadx_core_079 = input_a[15] | input_a[19];
+  assign popcount20_nadx_core_080 = input_a[1] ^ input_a[13];
+  assign popcount20_nadx_core_081 = input_a[14] & input_a[8];
+  assign popcount20_nadx_core_082 = ~(input_a[9] ^ input_a[19]);
+  assign popcount20_nadx_core_086 = ~(input_a[2] & input_a[0]);
+  assign popcount20_nadx_core_088 = ~(input_a[10] | input_a[19]);
+  assign popcount20_nadx_core_090 = ~input_a[14];
+  assign popcount20_nadx_core_091 = input_a[15] ^ input_a[14];
+  assign popcount20_nadx_core_093 = ~(input_a[12] ^ input_a[11]);
+  assign popcount20_nadx_core_094 = input_a[17] ^ input_a[9];
+  assign popcount20_nadx_core_095 = input_a[10] ^ input_a[16];
+  assign popcount20_nadx_core_100 = input_a[15] | input_a[4];
+  assign popcount20_nadx_core_103 = input_a[8] | input_a[10];
+  assign popcount20_nadx_core_104 = ~(input_a[14] | input_a[0]);
+  assign popcount20_nadx_core_105 = input_a[19] | input_a[4];
+  assign popcount20_nadx_core_107 = ~(input_a[0] | input_a[9]);
+  assign popcount20_nadx_core_109 = input_a[11] ^ input_a[14];
+  assign popcount20_nadx_core_112 = input_a[4] & input_a[3];
+  assign popcount20_nadx_core_113_not = ~input_a[14];
+  assign popcount20_nadx_core_114 = ~input_a[19];
+  assign popcount20_nadx_core_117 = ~input_a[10];
+  assign popcount20_nadx_core_118_not = ~input_a[16];
+  assign popcount20_nadx_core_119 = ~(input_a[3] ^ input_a[19]);
+  assign popcount20_nadx_core_120 = input_a[5] ^ input_a[4];
+  assign popcount20_nadx_core_121 = input_a[8] ^ input_a[19];
+  assign popcount20_nadx_core_122 = input_a[18] & input_a[13];
+  assign popcount20_nadx_core_123 = ~input_a[17];
+  assign popcount20_nadx_core_124 = input_a[16] ^ input_a[10];
+  assign popcount20_nadx_core_127 = ~(input_a[4] | input_a[15]);
+  assign popcount20_nadx_core_128 = ~(input_a[19] ^ input_a[6]);
+  assign popcount20_nadx_core_130 = ~(input_a[9] ^ input_a[4]);
+  assign popcount20_nadx_core_131 = ~(input_a[0] | input_a[8]);
+  assign popcount20_nadx_core_132 = input_a[6] ^ input_a[13];
+  assign popcount20_nadx_core_133 = ~input_a[2];
+  assign popcount20_nadx_core_134 = input_a[11] & input_a[11];
+  assign popcount20_nadx_core_138 = ~(input_a[18] ^ input_a[19]);
+  assign popcount20_nadx_core_139_not = ~input_a[12];
+  assign popcount20_nadx_core_144 = input_a[18] | input_a[11];
+  assign popcount20_nadx_core_145 = input_a[5] ^ input_a[10];
+
+  assign popcount20_nadx_out[0] = 1'b0;
+  assign popcount20_nadx_out[1] = 1'b1;
+  assign popcount20_nadx_out[2] = input_a[16];
+  assign popcount20_nadx_out[3] = input_a[2];
+  assign popcount20_nadx_out[4] = 1'b0;
+endmodule

@@ -1,0 +1,99 @@
+# 
+# This code is a part of TNNApprox library distributed under The MIT License.
+# When used, please cite the following article: V. Mrazek, A. Kokkinis, P. Papanikolaou, Z. Vasicek, K. Siozis, G. Tzimpragos, M. Tahoori, G. Zervakis "Evolutionary Approximation of Ternary Neurons \for On-sensor Printed Neural Networks" International Conference on Computer Aided Design (ICCAD), 2024
+# 
+# MAE=1.93817
+# WCE=11.0
+# EP=0.839821%
+# Printed PDK parameters:
+#  Area=0.0
+#  Delay=0.0
+#  Power=0.0
+
+def popcount20_3j0v(input_a):
+  popcount20_3j0v_core_023 = ~(((input_a >> 18) & 0x01) & ((input_a >> 8) & 0x01)) & 0x01
+  popcount20_3j0v_core_024 = ~(((input_a >> 6) & 0x01) & ((input_a >> 16) & 0x01)) & 0x01
+  popcount20_3j0v_core_025 = ~(((input_a >> 1) & 0x01) | ((input_a >> 11) & 0x01)) & 0x01
+  popcount20_3j0v_core_026 = ((input_a >> 12) & 0x01) & ((input_a >> 8) & 0x01)
+  popcount20_3j0v_core_027 = ((input_a >> 1) & 0x01) & ((input_a >> 6) & 0x01)
+  popcount20_3j0v_core_028 = ~(((input_a >> 19) & 0x01) | ((input_a >> 19) & 0x01)) & 0x01
+  popcount20_3j0v_core_029 = ~(((input_a >> 3) & 0x01) ^ ((input_a >> 15) & 0x01)) & 0x01
+  popcount20_3j0v_core_030 = ((input_a >> 8) & 0x01) & ((input_a >> 18) & 0x01)
+  popcount20_3j0v_core_032 = ~(((input_a >> 9) & 0x01) & ((input_a >> 17) & 0x01)) & 0x01
+  popcount20_3j0v_core_033 = ~(((input_a >> 16) & 0x01) | ((input_a >> 12) & 0x01)) & 0x01
+  popcount20_3j0v_core_039 = ((input_a >> 16) & 0x01) & ((input_a >> 7) & 0x01)
+  popcount20_3j0v_core_040 = ((input_a >> 13) & 0x01) & ((input_a >> 2) & 0x01)
+  popcount20_3j0v_core_043 = ~(((input_a >> 16) & 0x01) | ((input_a >> 15) & 0x01)) & 0x01
+  popcount20_3j0v_core_044 = ((input_a >> 17) & 0x01) ^ ((input_a >> 10) & 0x01)
+  popcount20_3j0v_core_045 = ~(((input_a >> 11) & 0x01) ^ ((input_a >> 0) & 0x01)) & 0x01
+  popcount20_3j0v_core_046 = ~(((input_a >> 13) & 0x01) & ((input_a >> 17) & 0x01)) & 0x01
+  popcount20_3j0v_core_047 = ((input_a >> 1) & 0x01) & ((input_a >> 2) & 0x01)
+  popcount20_3j0v_core_048 = ((input_a >> 8) & 0x01) ^ ((input_a >> 11) & 0x01)
+  popcount20_3j0v_core_049 = ((input_a >> 4) & 0x01) & ((input_a >> 3) & 0x01)
+  popcount20_3j0v_core_050 = ~(((input_a >> 6) & 0x01)) & 0x01
+  popcount20_3j0v_core_051_not = ~(((input_a >> 15) & 0x01)) & 0x01
+  popcount20_3j0v_core_052 = ~(((input_a >> 10) & 0x01) | ((input_a >> 2) & 0x01)) & 0x01
+  popcount20_3j0v_core_053 = ~(((input_a >> 8) & 0x01) | ((input_a >> 10) & 0x01)) & 0x01
+  popcount20_3j0v_core_054 = ~(((input_a >> 6) & 0x01)) & 0x01
+  popcount20_3j0v_core_055 = ((input_a >> 11) & 0x01) ^ ((input_a >> 0) & 0x01)
+  popcount20_3j0v_core_056 = ~(((input_a >> 13) & 0x01) ^ ((input_a >> 3) & 0x01)) & 0x01
+  popcount20_3j0v_core_057 = ((input_a >> 16) & 0x01) & ((input_a >> 1) & 0x01)
+  popcount20_3j0v_core_058 = ((input_a >> 14) & 0x01) | ((input_a >> 5) & 0x01)
+  popcount20_3j0v_core_063 = ~(((input_a >> 1) & 0x01) & ((input_a >> 11) & 0x01)) & 0x01
+  popcount20_3j0v_core_066 = ~(((input_a >> 3) & 0x01) | ((input_a >> 7) & 0x01)) & 0x01
+  popcount20_3j0v_core_067 = ~(((input_a >> 15) & 0x01) & ((input_a >> 15) & 0x01)) & 0x01
+  popcount20_3j0v_core_068_not = ~(((input_a >> 14) & 0x01)) & 0x01
+  popcount20_3j0v_core_069 = ((input_a >> 19) & 0x01) & ((input_a >> 3) & 0x01)
+  popcount20_3j0v_core_071 = ((input_a >> 15) & 0x01) | ((input_a >> 19) & 0x01)
+  popcount20_3j0v_core_072 = ((input_a >> 3) & 0x01) ^ ((input_a >> 17) & 0x01)
+  popcount20_3j0v_core_073 = ((input_a >> 0) & 0x01) | ((input_a >> 10) & 0x01)
+  popcount20_3j0v_core_075 = ~(((input_a >> 5) & 0x01) ^ ((input_a >> 15) & 0x01)) & 0x01
+  popcount20_3j0v_core_076 = ((input_a >> 11) & 0x01) & ((input_a >> 7) & 0x01)
+  popcount20_3j0v_core_077 = ~(((input_a >> 11) & 0x01) & ((input_a >> 19) & 0x01)) & 0x01
+  popcount20_3j0v_core_078 = ((input_a >> 18) & 0x01) & ((input_a >> 1) & 0x01)
+  popcount20_3j0v_core_080 = ~(((input_a >> 10) & 0x01) | ((input_a >> 2) & 0x01)) & 0x01
+  popcount20_3j0v_core_082 = ((input_a >> 19) & 0x01) ^ ((input_a >> 18) & 0x01)
+  popcount20_3j0v_core_087 = ((input_a >> 7) & 0x01) ^ ((input_a >> 11) & 0x01)
+  popcount20_3j0v_core_090 = ~(((input_a >> 13) & 0x01) & ((input_a >> 13) & 0x01)) & 0x01
+  popcount20_3j0v_core_091 = ~(((input_a >> 15) & 0x01) | ((input_a >> 15) & 0x01)) & 0x01
+  popcount20_3j0v_core_095 = ((input_a >> 1) & 0x01) | ((input_a >> 12) & 0x01)
+  popcount20_3j0v_core_096 = ~(((input_a >> 10) & 0x01)) & 0x01
+  popcount20_3j0v_core_097 = ~(((input_a >> 6) & 0x01) | ((input_a >> 18) & 0x01)) & 0x01
+  popcount20_3j0v_core_101 = ((input_a >> 10) & 0x01) | ((input_a >> 10) & 0x01)
+  popcount20_3j0v_core_102 = ~(((input_a >> 9) & 0x01) | ((input_a >> 15) & 0x01)) & 0x01
+  popcount20_3j0v_core_103 = ((input_a >> 19) & 0x01) & ((input_a >> 14) & 0x01)
+  popcount20_3j0v_core_105 = ~(((input_a >> 7) & 0x01) ^ ((input_a >> 7) & 0x01)) & 0x01
+  popcount20_3j0v_core_106 = ~(((input_a >> 12) & 0x01) | ((input_a >> 14) & 0x01)) & 0x01
+  popcount20_3j0v_core_108 = ~(((input_a >> 18) & 0x01)) & 0x01
+  popcount20_3j0v_core_109 = ~(((input_a >> 7) & 0x01)) & 0x01
+  popcount20_3j0v_core_113 = ~(((input_a >> 7) & 0x01) & ((input_a >> 17) & 0x01)) & 0x01
+  popcount20_3j0v_core_114 = ~(((input_a >> 16) & 0x01)) & 0x01
+  popcount20_3j0v_core_116 = ((input_a >> 17) & 0x01) | ((input_a >> 6) & 0x01)
+  popcount20_3j0v_core_117 = ~(((input_a >> 4) & 0x01) ^ ((input_a >> 18) & 0x01)) & 0x01
+  popcount20_3j0v_core_119 = ~(((input_a >> 14) & 0x01) & ((input_a >> 8) & 0x01)) & 0x01
+  popcount20_3j0v_core_120 = ~(((input_a >> 6) & 0x01) & ((input_a >> 1) & 0x01)) & 0x01
+  popcount20_3j0v_core_121 = ~(((input_a >> 11) & 0x01) | ((input_a >> 1) & 0x01)) & 0x01
+  popcount20_3j0v_core_122 = ~(((input_a >> 15) & 0x01) | ((input_a >> 9) & 0x01)) & 0x01
+  popcount20_3j0v_core_123 = ~(((input_a >> 7) & 0x01) ^ ((input_a >> 16) & 0x01)) & 0x01
+  popcount20_3j0v_core_125 = ~(((input_a >> 14) & 0x01) & ((input_a >> 10) & 0x01)) & 0x01
+  popcount20_3j0v_core_126 = ((input_a >> 18) & 0x01) | ((input_a >> 4) & 0x01)
+  popcount20_3j0v_core_127 = ((input_a >> 9) & 0x01) | ((input_a >> 6) & 0x01)
+  popcount20_3j0v_core_128 = ~(((input_a >> 10) & 0x01) | ((input_a >> 16) & 0x01)) & 0x01
+  popcount20_3j0v_core_129 = ~(((input_a >> 12) & 0x01) ^ ((input_a >> 13) & 0x01)) & 0x01
+  popcount20_3j0v_core_133 = ~(((input_a >> 17) & 0x01) & ((input_a >> 8) & 0x01)) & 0x01
+  popcount20_3j0v_core_136 = ~(((input_a >> 17) & 0x01)) & 0x01
+  popcount20_3j0v_core_137 = ~(((input_a >> 6) & 0x01)) & 0x01
+  popcount20_3j0v_core_138 = ~(((input_a >> 3) & 0x01) | ((input_a >> 7) & 0x01)) & 0x01
+  popcount20_3j0v_core_139 = ((input_a >> 10) & 0x01) | ((input_a >> 9) & 0x01)
+  popcount20_3j0v_core_141 = ((input_a >> 5) & 0x01) & ((input_a >> 18) & 0x01)
+  popcount20_3j0v_core_142 = ((input_a >> 5) & 0x01) & ((input_a >> 18) & 0x01)
+  popcount20_3j0v_core_143 = ((input_a >> 8) & 0x01) & ((input_a >> 8) & 0x01)
+  popcount20_3j0v_core_145 = ((input_a >> 7) & 0x01) | ((input_a >> 0) & 0x01)
+
+  popcount20_3j0v_out = 0
+  popcount20_3j0v_out = (popcount20_3j0v_out) | ((0x00) << 0)
+  popcount20_3j0v_out = (popcount20_3j0v_out) | (((input_a >> 15) & 0x01) << 1)
+  popcount20_3j0v_out = (popcount20_3j0v_out) | ((0x00) << 2)
+  popcount20_3j0v_out = (popcount20_3j0v_out) | ((0x01) << 3)
+  popcount20_3j0v_out = (popcount20_3j0v_out) | ((0x00) << 4)
+  return popcount20_3j0v_out

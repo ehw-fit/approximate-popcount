@@ -1,0 +1,165 @@
+// 
+// This code is a part of TNNApprox library distributed under The MIT License.
+// When used, please cite the following article: V. Mrazek, A. Kokkinis, P. Papanikolaou, Z. Vasicek, K. Siozis, G. Tzimpragos, M. Tahoori, G. Zervakis "Evolutionary Approximation of Ternary Neurons \for On-sensor Printed Neural Networks" International Conference on Computer Aided Design (ICCAD), 2024
+// 
+// MAE=1.94744
+// WCE=10.0
+// EP=0.84235%
+// Printed PDK parameters:
+//  Area=433500.0
+//  Delay=3172260.0
+//  Power=36240.0
+
+module popcount20_ng2h(input [19:0] input_a, output [4:0] popcount20_ng2h_out);
+  wire popcount20_ng2h_core_022;
+  wire popcount20_ng2h_core_023;
+  wire popcount20_ng2h_core_025;
+  wire popcount20_ng2h_core_026;
+  wire popcount20_ng2h_core_027;
+  wire popcount20_ng2h_core_030;
+  wire popcount20_ng2h_core_032;
+  wire popcount20_ng2h_core_033;
+  wire popcount20_ng2h_core_036_not;
+  wire popcount20_ng2h_core_037;
+  wire popcount20_ng2h_core_038;
+  wire popcount20_ng2h_core_039;
+  wire popcount20_ng2h_core_041;
+  wire popcount20_ng2h_core_042;
+  wire popcount20_ng2h_core_043;
+  wire popcount20_ng2h_core_044;
+  wire popcount20_ng2h_core_045;
+  wire popcount20_ng2h_core_047;
+  wire popcount20_ng2h_core_048;
+  wire popcount20_ng2h_core_049;
+  wire popcount20_ng2h_core_050;
+  wire popcount20_ng2h_core_052;
+  wire popcount20_ng2h_core_053;
+  wire popcount20_ng2h_core_055;
+  wire popcount20_ng2h_core_056;
+  wire popcount20_ng2h_core_057;
+  wire popcount20_ng2h_core_059;
+  wire popcount20_ng2h_core_060;
+  wire popcount20_ng2h_core_062;
+  wire popcount20_ng2h_core_063;
+  wire popcount20_ng2h_core_065;
+  wire popcount20_ng2h_core_067;
+  wire popcount20_ng2h_core_070;
+  wire popcount20_ng2h_core_071;
+  wire popcount20_ng2h_core_073;
+  wire popcount20_ng2h_core_074;
+  wire popcount20_ng2h_core_075;
+  wire popcount20_ng2h_core_076;
+  wire popcount20_ng2h_core_079;
+  wire popcount20_ng2h_core_080;
+  wire popcount20_ng2h_core_081;
+  wire popcount20_ng2h_core_089;
+  wire popcount20_ng2h_core_092;
+  wire popcount20_ng2h_core_093;
+  wire popcount20_ng2h_core_094;
+  wire popcount20_ng2h_core_095;
+  wire popcount20_ng2h_core_096;
+  wire popcount20_ng2h_core_099;
+  wire popcount20_ng2h_core_100;
+  wire popcount20_ng2h_core_101;
+  wire popcount20_ng2h_core_102;
+  wire popcount20_ng2h_core_103;
+  wire popcount20_ng2h_core_115;
+  wire popcount20_ng2h_core_116;
+  wire popcount20_ng2h_core_117;
+  wire popcount20_ng2h_core_118;
+  wire popcount20_ng2h_core_121;
+  wire popcount20_ng2h_core_123;
+  wire popcount20_ng2h_core_125;
+  wire popcount20_ng2h_core_126;
+  wire popcount20_ng2h_core_128;
+  wire popcount20_ng2h_core_129;
+  wire popcount20_ng2h_core_131;
+  wire popcount20_ng2h_core_132;
+  wire popcount20_ng2h_core_133;
+  wire popcount20_ng2h_core_135_not;
+  wire popcount20_ng2h_core_136;
+  wire popcount20_ng2h_core_137;
+  wire popcount20_ng2h_core_139;
+  wire popcount20_ng2h_core_140;
+  wire popcount20_ng2h_core_141;
+  wire popcount20_ng2h_core_145;
+
+  assign popcount20_ng2h_core_022 = input_a[17] | input_a[3];
+  assign popcount20_ng2h_core_023 = ~(input_a[11] ^ input_a[1]);
+  assign popcount20_ng2h_core_025 = input_a[13] & input_a[13];
+  assign popcount20_ng2h_core_026 = input_a[0] | input_a[10];
+  assign popcount20_ng2h_core_027 = ~input_a[19];
+  assign popcount20_ng2h_core_030 = input_a[2] & input_a[4];
+  assign popcount20_ng2h_core_032 = ~(input_a[1] ^ input_a[11]);
+  assign popcount20_ng2h_core_033 = ~(input_a[8] | input_a[17]);
+  assign popcount20_ng2h_core_036_not = ~input_a[19];
+  assign popcount20_ng2h_core_037 = ~input_a[4];
+  assign popcount20_ng2h_core_038 = ~(input_a[6] | input_a[0]);
+  assign popcount20_ng2h_core_039 = ~(input_a[7] | input_a[6]);
+  assign popcount20_ng2h_core_041 = input_a[9] & input_a[15];
+  assign popcount20_ng2h_core_042 = input_a[1] & input_a[19];
+  assign popcount20_ng2h_core_043 = input_a[13] & input_a[8];
+  assign popcount20_ng2h_core_044 = input_a[7] & input_a[3];
+  assign popcount20_ng2h_core_045 = input_a[6] ^ input_a[8];
+  assign popcount20_ng2h_core_047 = input_a[17] & input_a[0];
+  assign popcount20_ng2h_core_048 = ~(input_a[14] | input_a[10]);
+  assign popcount20_ng2h_core_049 = input_a[19] | input_a[19];
+  assign popcount20_ng2h_core_050 = ~(input_a[19] & input_a[5]);
+  assign popcount20_ng2h_core_052 = input_a[12] & input_a[11];
+  assign popcount20_ng2h_core_053 = input_a[17] & input_a[9];
+  assign popcount20_ng2h_core_055 = ~(input_a[12] & input_a[17]);
+  assign popcount20_ng2h_core_056 = input_a[7] | input_a[7];
+  assign popcount20_ng2h_core_057 = input_a[4] ^ input_a[7];
+  assign popcount20_ng2h_core_059 = ~(input_a[19] | input_a[8]);
+  assign popcount20_ng2h_core_060 = input_a[15] ^ input_a[18];
+  assign popcount20_ng2h_core_062 = input_a[17] & input_a[6];
+  assign popcount20_ng2h_core_063 = ~(input_a[18] & input_a[6]);
+  assign popcount20_ng2h_core_065 = ~(input_a[0] | input_a[8]);
+  assign popcount20_ng2h_core_067 = input_a[8] | input_a[9];
+  assign popcount20_ng2h_core_070 = ~(input_a[13] | input_a[0]);
+  assign popcount20_ng2h_core_071 = ~(input_a[10] | input_a[5]);
+  assign popcount20_ng2h_core_073 = ~(input_a[4] & input_a[9]);
+  assign popcount20_ng2h_core_074 = ~(input_a[15] ^ input_a[0]);
+  assign popcount20_ng2h_core_075 = ~(input_a[13] ^ input_a[3]);
+  assign popcount20_ng2h_core_076 = ~(input_a[19] | input_a[6]);
+  assign popcount20_ng2h_core_079 = ~(input_a[6] & input_a[7]);
+  assign popcount20_ng2h_core_080 = ~input_a[18];
+  assign popcount20_ng2h_core_081 = ~(input_a[10] | input_a[17]);
+  assign popcount20_ng2h_core_089 = input_a[6] ^ input_a[0];
+  assign popcount20_ng2h_core_092 = input_a[6] ^ input_a[19];
+  assign popcount20_ng2h_core_093 = input_a[14] ^ input_a[18];
+  assign popcount20_ng2h_core_094 = ~input_a[14];
+  assign popcount20_ng2h_core_095 = ~(input_a[14] ^ input_a[19]);
+  assign popcount20_ng2h_core_096 = ~(input_a[16] & input_a[11]);
+  assign popcount20_ng2h_core_099 = ~(input_a[8] | input_a[15]);
+  assign popcount20_ng2h_core_100 = ~input_a[7];
+  assign popcount20_ng2h_core_101 = input_a[1] & input_a[13];
+  assign popcount20_ng2h_core_102 = ~(input_a[12] | input_a[1]);
+  assign popcount20_ng2h_core_103 = input_a[5] & input_a[1];
+  assign popcount20_ng2h_core_115 = ~(input_a[7] ^ input_a[2]);
+  assign popcount20_ng2h_core_116 = ~(input_a[12] ^ input_a[2]);
+  assign popcount20_ng2h_core_117 = ~(input_a[4] & input_a[11]);
+  assign popcount20_ng2h_core_118 = ~(input_a[17] & input_a[0]);
+  assign popcount20_ng2h_core_121 = ~(input_a[15] & input_a[8]);
+  assign popcount20_ng2h_core_123 = ~(input_a[0] & input_a[0]);
+  assign popcount20_ng2h_core_125 = ~(input_a[16] ^ input_a[6]);
+  assign popcount20_ng2h_core_126 = input_a[0] | input_a[5];
+  assign popcount20_ng2h_core_128 = input_a[2] | input_a[12];
+  assign popcount20_ng2h_core_129 = input_a[8] ^ input_a[4];
+  assign popcount20_ng2h_core_131 = ~(input_a[13] | input_a[19]);
+  assign popcount20_ng2h_core_132 = ~(input_a[3] | input_a[8]);
+  assign popcount20_ng2h_core_133 = input_a[9] & input_a[10];
+  assign popcount20_ng2h_core_135_not = ~input_a[17];
+  assign popcount20_ng2h_core_136 = ~(input_a[1] & input_a[3]);
+  assign popcount20_ng2h_core_137 = input_a[13] ^ input_a[6];
+  assign popcount20_ng2h_core_139 = ~(input_a[1] ^ input_a[6]);
+  assign popcount20_ng2h_core_140 = input_a[10] | input_a[9];
+  assign popcount20_ng2h_core_141 = ~(input_a[17] & input_a[18]);
+  assign popcount20_ng2h_core_145 = ~(input_a[14] | input_a[17]);
+
+  assign popcount20_ng2h_out[0] = input_a[3];
+  assign popcount20_ng2h_out[1] = 1'b0;
+  assign popcount20_ng2h_out[2] = popcount20_ng2h_core_052;
+  assign popcount20_ng2h_out[3] = 1'b1;
+  assign popcount20_ng2h_out[4] = 1'b0;
+endmodule
