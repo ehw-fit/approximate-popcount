@@ -1,0 +1,107 @@
+# 
+# This code is a part of TNNApprox library distributed under The MIT License.
+# When used, please cite the following article: V. Mrazek, A. Kokkinis, P. Papanikolaou, Z. Vasicek, K. Siozis, G. Tzimpragos, M. Tahoori, G. Zervakis "Evolutionary Approximation of Ternary Neurons \for On-sensor Printed Neural Networks" International Conference on Computer Aided Design (ICCAD), 2024
+# 
+# MAE=1.38281
+# WCE=4.0
+# EP=0.787109%
+# Printed PDK parameters:
+#  Area=35062389.0
+#  Delay=52259144.0
+#  Power=1550500.0
+
+def popcount19_njix(input_a):
+  popcount19_njix_core_021 = ((input_a >> 0) & 0x01) ^ ((input_a >> 1) & 0x01)
+  popcount19_njix_core_022 = ((input_a >> 0) & 0x01) & ((input_a >> 1) & 0x01)
+  popcount19_njix_core_023 = ((input_a >> 2) & 0x01) ^ ((input_a >> 3) & 0x01)
+  popcount19_njix_core_024 = ((input_a >> 2) & 0x01) & ((input_a >> 3) & 0x01)
+  popcount19_njix_core_025 = ((popcount19_njix_core_021 >> 0) & 0x01) | ((popcount19_njix_core_023 >> 0) & 0x01)
+  popcount19_njix_core_026 = ((input_a >> 5) & 0x01) | ((input_a >> 16) & 0x01)
+  popcount19_njix_core_027 = ((input_a >> 14) & 0x01) & ((input_a >> 5) & 0x01)
+  popcount19_njix_core_028 = ((popcount19_njix_core_022 >> 0) & 0x01) & ((popcount19_njix_core_024 >> 0) & 0x01)
+  popcount19_njix_core_030_not = ~(((input_a >> 8) & 0x01)) & 0x01
+  popcount19_njix_core_032 = ((input_a >> 4) & 0x01) ^ ((input_a >> 5) & 0x01)
+  popcount19_njix_core_033 = ((input_a >> 4) & 0x01) & ((input_a >> 5) & 0x01)
+  popcount19_njix_core_034 = ((input_a >> 17) & 0x01) & ((input_a >> 16) & 0x01)
+  popcount19_njix_core_035 = ((input_a >> 7) & 0x01) & ((input_a >> 8) & 0x01)
+  popcount19_njix_core_036 = ((input_a >> 10) & 0x01) ^ ((input_a >> 8) & 0x01)
+  popcount19_njix_core_037 = ~(((input_a >> 15) & 0x01) ^ ((input_a >> 2) & 0x01)) & 0x01
+  popcount19_njix_core_040 = ((popcount19_njix_core_032 >> 0) & 0x01) ^ ((input_a >> 6) & 0x01)
+  popcount19_njix_core_041 = ((popcount19_njix_core_032 >> 0) & 0x01) & ((input_a >> 6) & 0x01)
+  popcount19_njix_core_042 = ((popcount19_njix_core_033 >> 0) & 0x01) ^ ((popcount19_njix_core_035 >> 0) & 0x01)
+  popcount19_njix_core_043 = ((popcount19_njix_core_033 >> 0) & 0x01) & ((popcount19_njix_core_035 >> 0) & 0x01)
+  popcount19_njix_core_044 = ((popcount19_njix_core_042 >> 0) & 0x01) ^ ((popcount19_njix_core_041 >> 0) & 0x01)
+  popcount19_njix_core_045 = ((popcount19_njix_core_042 >> 0) & 0x01) & ((popcount19_njix_core_041 >> 0) & 0x01)
+  popcount19_njix_core_046 = ((popcount19_njix_core_043 >> 0) & 0x01) | ((popcount19_njix_core_045 >> 0) & 0x01)
+  popcount19_njix_core_050 = ((popcount19_njix_core_025 >> 0) & 0x01) & ((popcount19_njix_core_040 >> 0) & 0x01)
+  popcount19_njix_core_053 = ((popcount19_njix_core_044 >> 0) & 0x01) ^ ((popcount19_njix_core_050 >> 0) & 0x01)
+  popcount19_njix_core_054 = ((popcount19_njix_core_044 >> 0) & 0x01) & ((popcount19_njix_core_050 >> 0) & 0x01)
+  popcount19_njix_core_056 = ((popcount19_njix_core_028 >> 0) & 0x01) ^ ((popcount19_njix_core_046 >> 0) & 0x01)
+  popcount19_njix_core_057 = ((popcount19_njix_core_028 >> 0) & 0x01) & ((popcount19_njix_core_046 >> 0) & 0x01)
+  popcount19_njix_core_058 = ((popcount19_njix_core_056 >> 0) & 0x01) | ((popcount19_njix_core_054 >> 0) & 0x01)
+  popcount19_njix_core_062 = ~(((input_a >> 3) & 0x01) & ((input_a >> 15) & 0x01)) & 0x01
+  popcount19_njix_core_064 = ~(((input_a >> 3) & 0x01) | ((input_a >> 8) & 0x01)) & 0x01
+  popcount19_njix_core_065 = ~(((input_a >> 17) & 0x01) & ((input_a >> 1) & 0x01)) & 0x01
+  popcount19_njix_core_066 = ~(((input_a >> 0) & 0x01) & ((input_a >> 1) & 0x01)) & 0x01
+  popcount19_njix_core_067 = ((input_a >> 17) & 0x01) ^ ((input_a >> 10) & 0x01)
+  popcount19_njix_core_068 = ~(((input_a >> 17) & 0x01) & ((input_a >> 11) & 0x01)) & 0x01
+  popcount19_njix_core_069 = ~(((input_a >> 0) & 0x01) ^ ((input_a >> 11) & 0x01)) & 0x01
+  popcount19_njix_core_071 = ~(((input_a >> 2) & 0x01) & ((input_a >> 1) & 0x01)) & 0x01
+  popcount19_njix_core_072 = ~(((input_a >> 9) & 0x01) | ((input_a >> 8) & 0x01)) & 0x01
+  popcount19_njix_core_073 = ~(((input_a >> 16) & 0x01) ^ ((input_a >> 11) & 0x01)) & 0x01
+  popcount19_njix_core_074 = ((input_a >> 9) & 0x01) & ((input_a >> 10) & 0x01)
+  popcount19_njix_core_076 = ((input_a >> 12) & 0x01) & ((input_a >> 13) & 0x01)
+  popcount19_njix_core_077 = ((popcount19_njix_core_074 >> 0) & 0x01) | ((popcount19_njix_core_076 >> 0) & 0x01)
+  popcount19_njix_core_079 = ~(((input_a >> 4) & 0x01)) & 0x01
+  popcount19_njix_core_080 = ((input_a >> 14) & 0x01) ^ ((input_a >> 15) & 0x01)
+  popcount19_njix_core_081 = ((input_a >> 14) & 0x01) & ((input_a >> 15) & 0x01)
+  popcount19_njix_core_082 = ((input_a >> 17) & 0x01) ^ ((input_a >> 18) & 0x01)
+  popcount19_njix_core_083 = ((input_a >> 17) & 0x01) & ((input_a >> 18) & 0x01)
+  popcount19_njix_core_084 = ((input_a >> 16) & 0x01) ^ ((popcount19_njix_core_082 >> 0) & 0x01)
+  popcount19_njix_core_085 = ((input_a >> 16) & 0x01) & ((popcount19_njix_core_082 >> 0) & 0x01)
+  popcount19_njix_core_086 = ((popcount19_njix_core_083 >> 0) & 0x01) | ((popcount19_njix_core_085 >> 0) & 0x01)
+  popcount19_njix_core_088 = ((popcount19_njix_core_080 >> 0) & 0x01) ^ ((popcount19_njix_core_084 >> 0) & 0x01)
+  popcount19_njix_core_089 = ((popcount19_njix_core_080 >> 0) & 0x01) & ((popcount19_njix_core_084 >> 0) & 0x01)
+  popcount19_njix_core_090 = ((popcount19_njix_core_081 >> 0) & 0x01) ^ ((popcount19_njix_core_086 >> 0) & 0x01)
+  popcount19_njix_core_091 = ((popcount19_njix_core_081 >> 0) & 0x01) & ((popcount19_njix_core_086 >> 0) & 0x01)
+  popcount19_njix_core_092 = ((popcount19_njix_core_090 >> 0) & 0x01) ^ ((popcount19_njix_core_089 >> 0) & 0x01)
+  popcount19_njix_core_093 = ((popcount19_njix_core_090 >> 0) & 0x01) & ((popcount19_njix_core_089 >> 0) & 0x01)
+  popcount19_njix_core_094 = ((popcount19_njix_core_091 >> 0) & 0x01) | ((popcount19_njix_core_093 >> 0) & 0x01)
+  popcount19_njix_core_098 = ((input_a >> 11) & 0x01) & ((popcount19_njix_core_088 >> 0) & 0x01)
+  popcount19_njix_core_099_not = ~(((popcount19_njix_core_092 >> 0) & 0x01)) & 0x01
+  popcount19_njix_core_101 = ((popcount19_njix_core_099_not >> 0) & 0x01) ^ ((popcount19_njix_core_098 >> 0) & 0x01)
+  popcount19_njix_core_102 = ((input_a >> 11) & 0x01) & ((popcount19_njix_core_098 >> 0) & 0x01)
+  popcount19_njix_core_103 = ((popcount19_njix_core_092 >> 0) & 0x01) | ((popcount19_njix_core_102 >> 0) & 0x01)
+  popcount19_njix_core_104 = ((popcount19_njix_core_077 >> 0) & 0x01) ^ ((popcount19_njix_core_094 >> 0) & 0x01)
+  popcount19_njix_core_105 = ((popcount19_njix_core_077 >> 0) & 0x01) & ((popcount19_njix_core_094 >> 0) & 0x01)
+  popcount19_njix_core_106 = ((popcount19_njix_core_104 >> 0) & 0x01) ^ ((popcount19_njix_core_103 >> 0) & 0x01)
+  popcount19_njix_core_107 = ((popcount19_njix_core_104 >> 0) & 0x01) & ((popcount19_njix_core_103 >> 0) & 0x01)
+  popcount19_njix_core_108 = ((popcount19_njix_core_105 >> 0) & 0x01) | ((popcount19_njix_core_107 >> 0) & 0x01)
+  popcount19_njix_core_110 = ((input_a >> 12) & 0x01) ^ ((input_a >> 13) & 0x01)
+  popcount19_njix_core_112_not = ~(((input_a >> 3) & 0x01)) & 0x01
+  popcount19_njix_core_113 = ((input_a >> 14) & 0x01) & ((input_a >> 11) & 0x01)
+  popcount19_njix_core_115 = ~(((input_a >> 12) & 0x01) & ((input_a >> 12) & 0x01)) & 0x01
+  popcount19_njix_core_116 = ((popcount19_njix_core_053 >> 0) & 0x01) ^ ((popcount19_njix_core_101 >> 0) & 0x01)
+  popcount19_njix_core_117 = ((popcount19_njix_core_053 >> 0) & 0x01) & ((popcount19_njix_core_101 >> 0) & 0x01)
+  popcount19_njix_core_118 = ~(((input_a >> 17) & 0x01)) & 0x01
+  popcount19_njix_core_121 = ((popcount19_njix_core_058 >> 0) & 0x01) ^ ((popcount19_njix_core_106 >> 0) & 0x01)
+  popcount19_njix_core_122 = ((popcount19_njix_core_058 >> 0) & 0x01) & ((popcount19_njix_core_106 >> 0) & 0x01)
+  popcount19_njix_core_123 = ((popcount19_njix_core_121 >> 0) & 0x01) ^ ((popcount19_njix_core_117 >> 0) & 0x01)
+  popcount19_njix_core_124 = ((popcount19_njix_core_121 >> 0) & 0x01) & ((popcount19_njix_core_117 >> 0) & 0x01)
+  popcount19_njix_core_125 = ((popcount19_njix_core_122 >> 0) & 0x01) | ((popcount19_njix_core_124 >> 0) & 0x01)
+  popcount19_njix_core_126 = ((popcount19_njix_core_057 >> 0) & 0x01) ^ ((popcount19_njix_core_108 >> 0) & 0x01)
+  popcount19_njix_core_127 = ((popcount19_njix_core_057 >> 0) & 0x01) & ((popcount19_njix_core_108 >> 0) & 0x01)
+  popcount19_njix_core_128 = ((popcount19_njix_core_126 >> 0) & 0x01) ^ ((popcount19_njix_core_125 >> 0) & 0x01)
+  popcount19_njix_core_129 = ((popcount19_njix_core_126 >> 0) & 0x01) & ((popcount19_njix_core_125 >> 0) & 0x01)
+  popcount19_njix_core_130 = ((popcount19_njix_core_127 >> 0) & 0x01) | ((popcount19_njix_core_129 >> 0) & 0x01)
+  popcount19_njix_core_131 = ~(((input_a >> 3) & 0x01) & ((input_a >> 9) & 0x01)) & 0x01
+  popcount19_njix_core_132 = ~(((input_a >> 12) & 0x01)) & 0x01
+  popcount19_njix_core_134 = ((input_a >> 18) & 0x01) | ((input_a >> 1) & 0x01)
+
+  popcount19_njix_out = 0
+  popcount19_njix_out = (popcount19_njix_out) | (((popcount19_njix_core_110 >> 0) & 0x01) << 0)
+  popcount19_njix_out = (popcount19_njix_out) | (((popcount19_njix_core_116 >> 0) & 0x01) << 1)
+  popcount19_njix_out = (popcount19_njix_out) | (((popcount19_njix_core_123 >> 0) & 0x01) << 2)
+  popcount19_njix_out = (popcount19_njix_out) | (((popcount19_njix_core_128 >> 0) & 0x01) << 3)
+  popcount19_njix_out = (popcount19_njix_out) | (((popcount19_njix_core_130 >> 0) & 0x01) << 4)
+  return popcount19_njix_out

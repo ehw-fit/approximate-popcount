@@ -1,0 +1,102 @@
+# 
+# This code is a part of TNNApprox library distributed under The MIT License.
+# When used, please cite the following article: V. Mrazek, A. Kokkinis, P. Papanikolaou, Z. Vasicek, K. Siozis, G. Tzimpragos, M. Tahoori, G. Zervakis "Evolutionary Approximation of Ternary Neurons \for On-sensor Printed Neural Networks" International Conference on Computer Aided Design (ICCAD), 2024
+# 
+# MAE=1.29883
+# WCE=5.0
+# EP=0.767578%
+# Printed PDK parameters:
+#  Area=32986633.0
+#  Delay=64508752.0
+#  Power=1306400.0
+
+def popcount21_cxcd(input_a):
+  popcount21_cxcd_core_023 = ((input_a >> 11) & 0x01) | ((input_a >> 16) & 0x01)
+  popcount21_cxcd_core_024 = ((input_a >> 0) & 0x01) & ((input_a >> 1) & 0x01)
+  popcount21_cxcd_core_025 = ~(((input_a >> 19) & 0x01) | ((input_a >> 13) & 0x01)) & 0x01
+  popcount21_cxcd_core_026 = ((input_a >> 3) & 0x01) & ((input_a >> 12) & 0x01)
+  popcount21_cxcd_core_027 = ~(((input_a >> 6) & 0x01) | ((input_a >> 1) & 0x01)) & 0x01
+  popcount21_cxcd_core_028 = ((input_a >> 2) & 0x01) & ((input_a >> 16) & 0x01)
+  popcount21_cxcd_core_029 = ((popcount21_cxcd_core_026 >> 0) & 0x01) ^ ((popcount21_cxcd_core_028 >> 0) & 0x01)
+  popcount21_cxcd_core_030 = ((popcount21_cxcd_core_026 >> 0) & 0x01) & ((popcount21_cxcd_core_028 >> 0) & 0x01)
+  popcount21_cxcd_core_031 = ((input_a >> 7) & 0x01) & ((input_a >> 12) & 0x01)
+  popcount21_cxcd_core_032 = ~(((input_a >> 19) & 0x01) ^ ((input_a >> 1) & 0x01)) & 0x01
+  popcount21_cxcd_core_033 = ((popcount21_cxcd_core_024 >> 0) & 0x01) ^ ((popcount21_cxcd_core_029 >> 0) & 0x01)
+  popcount21_cxcd_core_034 = ((popcount21_cxcd_core_024 >> 0) & 0x01) & ((popcount21_cxcd_core_029 >> 0) & 0x01)
+  popcount21_cxcd_core_036 = ~(((input_a >> 17) & 0x01) & ((input_a >> 10) & 0x01)) & 0x01
+  popcount21_cxcd_core_038 = ((popcount21_cxcd_core_030 >> 0) & 0x01) | ((popcount21_cxcd_core_034 >> 0) & 0x01)
+  popcount21_cxcd_core_040 = ((input_a >> 5) & 0x01) ^ ((input_a >> 6) & 0x01)
+  popcount21_cxcd_core_041 = ((input_a >> 5) & 0x01) & ((input_a >> 6) & 0x01)
+  popcount21_cxcd_core_042 = ((input_a >> 8) & 0x01) ^ ((input_a >> 9) & 0x01)
+  popcount21_cxcd_core_043 = ((input_a >> 8) & 0x01) & ((input_a >> 9) & 0x01)
+  popcount21_cxcd_core_044 = ((input_a >> 7) & 0x01) ^ ((popcount21_cxcd_core_042 >> 0) & 0x01)
+  popcount21_cxcd_core_045 = ((input_a >> 7) & 0x01) & ((popcount21_cxcd_core_042 >> 0) & 0x01)
+  popcount21_cxcd_core_046 = ((popcount21_cxcd_core_043 >> 0) & 0x01) | ((popcount21_cxcd_core_045 >> 0) & 0x01)
+  popcount21_cxcd_core_049 = ((popcount21_cxcd_core_040 >> 0) & 0x01) & ((popcount21_cxcd_core_044 >> 0) & 0x01)
+  popcount21_cxcd_core_050 = ((popcount21_cxcd_core_041 >> 0) & 0x01) ^ ((popcount21_cxcd_core_046 >> 0) & 0x01)
+  popcount21_cxcd_core_051 = ((popcount21_cxcd_core_041 >> 0) & 0x01) & ((popcount21_cxcd_core_046 >> 0) & 0x01)
+  popcount21_cxcd_core_052 = ((popcount21_cxcd_core_050 >> 0) & 0x01) ^ ((popcount21_cxcd_core_049 >> 0) & 0x01)
+  popcount21_cxcd_core_053 = ((popcount21_cxcd_core_050 >> 0) & 0x01) & ((popcount21_cxcd_core_049 >> 0) & 0x01)
+  popcount21_cxcd_core_054 = ((popcount21_cxcd_core_051 >> 0) & 0x01) | ((popcount21_cxcd_core_053 >> 0) & 0x01)
+  popcount21_cxcd_core_057 = ((input_a >> 9) & 0x01) ^ ((input_a >> 19) & 0x01)
+  popcount21_cxcd_core_058 = ((input_a >> 14) & 0x01) & ((input_a >> 11) & 0x01)
+  popcount21_cxcd_core_059 = ((popcount21_cxcd_core_033 >> 0) & 0x01) ^ ((popcount21_cxcd_core_052 >> 0) & 0x01)
+  popcount21_cxcd_core_060 = ((popcount21_cxcd_core_033 >> 0) & 0x01) & ((popcount21_cxcd_core_052 >> 0) & 0x01)
+  popcount21_cxcd_core_061 = ((popcount21_cxcd_core_059 >> 0) & 0x01) ^ ((popcount21_cxcd_core_058 >> 0) & 0x01)
+  popcount21_cxcd_core_062 = ((popcount21_cxcd_core_059 >> 0) & 0x01) & ((popcount21_cxcd_core_058 >> 0) & 0x01)
+  popcount21_cxcd_core_063 = ((popcount21_cxcd_core_060 >> 0) & 0x01) | ((popcount21_cxcd_core_062 >> 0) & 0x01)
+  popcount21_cxcd_core_064 = ((popcount21_cxcd_core_038 >> 0) & 0x01) ^ ((popcount21_cxcd_core_054 >> 0) & 0x01)
+  popcount21_cxcd_core_065 = ((popcount21_cxcd_core_038 >> 0) & 0x01) & ((popcount21_cxcd_core_054 >> 0) & 0x01)
+  popcount21_cxcd_core_066 = ((popcount21_cxcd_core_064 >> 0) & 0x01) ^ ((popcount21_cxcd_core_063 >> 0) & 0x01)
+  popcount21_cxcd_core_067 = ((popcount21_cxcd_core_064 >> 0) & 0x01) & ((popcount21_cxcd_core_063 >> 0) & 0x01)
+  popcount21_cxcd_core_068 = ((popcount21_cxcd_core_065 >> 0) & 0x01) | ((popcount21_cxcd_core_067 >> 0) & 0x01)
+  popcount21_cxcd_core_070 = ~(((input_a >> 10) & 0x01) & ((input_a >> 2) & 0x01)) & 0x01
+  popcount21_cxcd_core_073 = ~(((input_a >> 7) & 0x01) ^ ((input_a >> 7) & 0x01)) & 0x01
+  popcount21_cxcd_core_074 = ~(((input_a >> 6) & 0x01) | ((input_a >> 5) & 0x01)) & 0x01
+  popcount21_cxcd_core_075 = ((input_a >> 10) & 0x01) & ((input_a >> 18) & 0x01)
+  popcount21_cxcd_core_077 = ((input_a >> 19) & 0x01) & ((input_a >> 4) & 0x01)
+  popcount21_cxcd_core_083 = ~(((input_a >> 7) & 0x01) & ((input_a >> 8) & 0x01)) & 0x01
+  popcount21_cxcd_core_084 = ((input_a >> 20) & 0x01) | ((input_a >> 6) & 0x01)
+  popcount21_cxcd_core_085 = ((popcount21_cxcd_core_075 >> 0) & 0x01) & ((popcount21_cxcd_core_077 >> 0) & 0x01)
+  popcount21_cxcd_core_087 = ~(((input_a >> 11) & 0x01) ^ ((input_a >> 8) & 0x01)) & 0x01
+  popcount21_cxcd_core_091 = ((input_a >> 10) & 0x01) | ((input_a >> 5) & 0x01)
+  popcount21_cxcd_core_092_not = ~(((input_a >> 0) & 0x01)) & 0x01
+  popcount21_cxcd_core_095 = ((input_a >> 15) & 0x01) | ((input_a >> 17) & 0x01)
+  popcount21_cxcd_core_098 = ((input_a >> 13) & 0x01) & ((input_a >> 20) & 0x01)
+  popcount21_cxcd_core_102 = ~(((input_a >> 0) & 0x01) | ((input_a >> 17) & 0x01)) & 0x01
+  popcount21_cxcd_core_103 = ~(((input_a >> 16) & 0x01) | ((input_a >> 19) & 0x01)) & 0x01
+  popcount21_cxcd_core_104 = ((input_a >> 7) & 0x01) ^ ((input_a >> 5) & 0x01)
+  popcount21_cxcd_core_105 = ((popcount21_cxcd_core_095 >> 0) & 0x01) ^ ((popcount21_cxcd_core_098 >> 0) & 0x01)
+  popcount21_cxcd_core_106 = ((popcount21_cxcd_core_095 >> 0) & 0x01) & ((popcount21_cxcd_core_098 >> 0) & 0x01)
+  popcount21_cxcd_core_111 = ~(((input_a >> 19) & 0x01) ^ ((input_a >> 13) & 0x01)) & 0x01
+  popcount21_cxcd_core_113_not = ~(((input_a >> 14) & 0x01)) & 0x01
+  popcount21_cxcd_core_114 = ~(((input_a >> 15) & 0x01) & ((input_a >> 20) & 0x01)) & 0x01
+  popcount21_cxcd_core_116 = ((input_a >> 12) & 0x01) ^ ((input_a >> 8) & 0x01)
+  popcount21_cxcd_core_119 = ~(((popcount21_cxcd_core_105 >> 0) & 0x01)) & 0x01
+  popcount21_cxcd_core_122 = ((popcount21_cxcd_core_085 >> 0) & 0x01) ^ ((popcount21_cxcd_core_106 >> 0) & 0x01)
+  popcount21_cxcd_core_123 = ((popcount21_cxcd_core_085 >> 0) & 0x01) & ((popcount21_cxcd_core_106 >> 0) & 0x01)
+  popcount21_cxcd_core_124 = ((popcount21_cxcd_core_122 >> 0) & 0x01) ^ ((popcount21_cxcd_core_105 >> 0) & 0x01)
+  popcount21_cxcd_core_125 = ((popcount21_cxcd_core_122 >> 0) & 0x01) & ((popcount21_cxcd_core_105 >> 0) & 0x01)
+  popcount21_cxcd_core_126 = ((popcount21_cxcd_core_123 >> 0) & 0x01) | ((popcount21_cxcd_core_125 >> 0) & 0x01)
+  popcount21_cxcd_core_128 = ((input_a >> 18) & 0x01) & ((input_a >> 8) & 0x01)
+  popcount21_cxcd_core_134 = ((popcount21_cxcd_core_061 >> 0) & 0x01) ^ ((popcount21_cxcd_core_119 >> 0) & 0x01)
+  popcount21_cxcd_core_136 = ~(((popcount21_cxcd_core_134 >> 0) & 0x01)) & 0x01
+  popcount21_cxcd_core_138 = ((popcount21_cxcd_core_061 >> 0) & 0x01) | ((popcount21_cxcd_core_134 >> 0) & 0x01)
+  popcount21_cxcd_core_139 = ((popcount21_cxcd_core_066 >> 0) & 0x01) ^ ((popcount21_cxcd_core_124 >> 0) & 0x01)
+  popcount21_cxcd_core_140 = ((popcount21_cxcd_core_066 >> 0) & 0x01) & ((popcount21_cxcd_core_124 >> 0) & 0x01)
+  popcount21_cxcd_core_141 = ((popcount21_cxcd_core_139 >> 0) & 0x01) ^ ((popcount21_cxcd_core_138 >> 0) & 0x01)
+  popcount21_cxcd_core_142 = ((popcount21_cxcd_core_139 >> 0) & 0x01) & ((popcount21_cxcd_core_138 >> 0) & 0x01)
+  popcount21_cxcd_core_143 = ((popcount21_cxcd_core_140 >> 0) & 0x01) | ((popcount21_cxcd_core_142 >> 0) & 0x01)
+  popcount21_cxcd_core_144 = ((popcount21_cxcd_core_068 >> 0) & 0x01) ^ ((popcount21_cxcd_core_126 >> 0) & 0x01)
+  popcount21_cxcd_core_145 = ((popcount21_cxcd_core_068 >> 0) & 0x01) & ((popcount21_cxcd_core_126 >> 0) & 0x01)
+  popcount21_cxcd_core_146 = ((popcount21_cxcd_core_144 >> 0) & 0x01) ^ ((popcount21_cxcd_core_143 >> 0) & 0x01)
+  popcount21_cxcd_core_147 = ((popcount21_cxcd_core_144 >> 0) & 0x01) & ((popcount21_cxcd_core_143 >> 0) & 0x01)
+  popcount21_cxcd_core_148 = ((popcount21_cxcd_core_145 >> 0) & 0x01) | ((popcount21_cxcd_core_147 >> 0) & 0x01)
+
+  popcount21_cxcd_out = 0
+  popcount21_cxcd_out = (popcount21_cxcd_out) | ((0x00) << 0)
+  popcount21_cxcd_out = (popcount21_cxcd_out) | (((popcount21_cxcd_core_136 >> 0) & 0x01) << 1)
+  popcount21_cxcd_out = (popcount21_cxcd_out) | (((popcount21_cxcd_core_141 >> 0) & 0x01) << 2)
+  popcount21_cxcd_out = (popcount21_cxcd_out) | (((popcount21_cxcd_core_146 >> 0) & 0x01) << 3)
+  popcount21_cxcd_out = (popcount21_cxcd_out) | (((popcount21_cxcd_core_148 >> 0) & 0x01) << 4)
+  return popcount21_cxcd_out

@@ -1,0 +1,101 @@
+# 
+# This code is a part of TNNApprox library distributed under The MIT License.
+# When used, please cite the following article: V. Mrazek, A. Kokkinis, P. Papanikolaou, Z. Vasicek, K. Siozis, G. Tzimpragos, M. Tahoori, G. Zervakis "Evolutionary Approximation of Ternary Neurons \for On-sensor Printed Neural Networks" International Conference on Computer Aided Design (ICCAD), 2024
+# 
+# MAE=0.897308
+# WCE=10.0
+# EP=0.662071%
+# Printed PDK parameters:
+#  Area=34172743.0
+#  Delay=66504448.0
+#  Power=1672500.0
+
+def popcount18_tdlx(input_a):
+  popcount18_tdlx_core_020 = ((input_a >> 7) & 0x01) & ((input_a >> 5) & 0x01)
+  popcount18_tdlx_core_022 = ~(((input_a >> 8) & 0x01) & ((input_a >> 10) & 0x01)) & 0x01
+  popcount18_tdlx_core_023 = ((input_a >> 2) & 0x01) & ((input_a >> 3) & 0x01)
+  popcount18_tdlx_core_026 = ((input_a >> 0) & 0x01) ^ ((popcount18_tdlx_core_023 >> 0) & 0x01)
+  popcount18_tdlx_core_028 = ((popcount18_tdlx_core_026 >> 0) & 0x01) ^ ((input_a >> 0) & 0x01)
+  popcount18_tdlx_core_029 = ~(((input_a >> 10) & 0x01) | ((input_a >> 17) & 0x01)) & 0x01
+  popcount18_tdlx_core_031 = ((input_a >> 4) & 0x01) ^ ((input_a >> 5) & 0x01)
+  popcount18_tdlx_core_032 = ((input_a >> 4) & 0x01) & ((input_a >> 5) & 0x01)
+  popcount18_tdlx_core_033 = ((input_a >> 7) & 0x01) ^ ((input_a >> 8) & 0x01)
+  popcount18_tdlx_core_034 = ((input_a >> 7) & 0x01) & ((input_a >> 8) & 0x01)
+  popcount18_tdlx_core_035 = ((input_a >> 6) & 0x01) ^ ((popcount18_tdlx_core_033 >> 0) & 0x01)
+  popcount18_tdlx_core_036 = ((input_a >> 6) & 0x01) & ((popcount18_tdlx_core_033 >> 0) & 0x01)
+  popcount18_tdlx_core_037 = ((popcount18_tdlx_core_034 >> 0) & 0x01) | ((popcount18_tdlx_core_036 >> 0) & 0x01)
+  popcount18_tdlx_core_040 = ((popcount18_tdlx_core_031 >> 0) & 0x01) & ((popcount18_tdlx_core_035 >> 0) & 0x01)
+  popcount18_tdlx_core_041 = ((popcount18_tdlx_core_032 >> 0) & 0x01) ^ ((popcount18_tdlx_core_037 >> 0) & 0x01)
+  popcount18_tdlx_core_042 = ((popcount18_tdlx_core_032 >> 0) & 0x01) & ((popcount18_tdlx_core_037 >> 0) & 0x01)
+  popcount18_tdlx_core_043 = ((popcount18_tdlx_core_041 >> 0) & 0x01) ^ ((popcount18_tdlx_core_040 >> 0) & 0x01)
+  popcount18_tdlx_core_044 = ((popcount18_tdlx_core_041 >> 0) & 0x01) & ((popcount18_tdlx_core_040 >> 0) & 0x01)
+  popcount18_tdlx_core_045 = ((popcount18_tdlx_core_042 >> 0) & 0x01) | ((popcount18_tdlx_core_044 >> 0) & 0x01)
+  popcount18_tdlx_core_048 = ~(((input_a >> 0) & 0x01)) & 0x01
+  popcount18_tdlx_core_049 = ((input_a >> 11) & 0x01) & ((input_a >> 4) & 0x01)
+  popcount18_tdlx_core_050 = ((popcount18_tdlx_core_028 >> 0) & 0x01) ^ ((popcount18_tdlx_core_043 >> 0) & 0x01)
+  popcount18_tdlx_core_051 = ((popcount18_tdlx_core_028 >> 0) & 0x01) & ((popcount18_tdlx_core_043 >> 0) & 0x01)
+  popcount18_tdlx_core_052 = ((popcount18_tdlx_core_050 >> 0) & 0x01) ^ ((input_a >> 0) & 0x01)
+  popcount18_tdlx_core_053 = ((popcount18_tdlx_core_050 >> 0) & 0x01) & ((input_a >> 0) & 0x01)
+  popcount18_tdlx_core_054 = ((popcount18_tdlx_core_051 >> 0) & 0x01) | ((popcount18_tdlx_core_053 >> 0) & 0x01)
+  popcount18_tdlx_core_057 = ((popcount18_tdlx_core_045 >> 0) & 0x01) | ((popcount18_tdlx_core_054 >> 0) & 0x01)
+  popcount18_tdlx_core_058 = ~(((input_a >> 14) & 0x01) & ((input_a >> 3) & 0x01)) & 0x01
+  popcount18_tdlx_core_061 = ~(((input_a >> 5) & 0x01) & ((input_a >> 16) & 0x01)) & 0x01
+  popcount18_tdlx_core_062 = ((input_a >> 9) & 0x01) ^ ((input_a >> 10) & 0x01)
+  popcount18_tdlx_core_063 = ((input_a >> 9) & 0x01) & ((input_a >> 10) & 0x01)
+  popcount18_tdlx_core_065 = ((input_a >> 12) & 0x01) & ((input_a >> 11) & 0x01)
+  popcount18_tdlx_core_066 = ((input_a >> 7) & 0x01) | ((input_a >> 15) & 0x01)
+  popcount18_tdlx_core_068 = ((input_a >> 9) & 0x01) ^ ((popcount18_tdlx_core_065 >> 0) & 0x01)
+  popcount18_tdlx_core_069 = ((popcount18_tdlx_core_063 >> 0) & 0x01) & ((popcount18_tdlx_core_065 >> 0) & 0x01)
+  popcount18_tdlx_core_070 = ((popcount18_tdlx_core_068 >> 0) & 0x01) | ((popcount18_tdlx_core_062 >> 0) & 0x01)
+  popcount18_tdlx_core_071 = ((input_a >> 8) & 0x01) ^ ((input_a >> 5) & 0x01)
+  popcount18_tdlx_core_073 = ((input_a >> 13) & 0x01) ^ ((input_a >> 14) & 0x01)
+  popcount18_tdlx_core_074 = ((input_a >> 13) & 0x01) & ((input_a >> 14) & 0x01)
+  popcount18_tdlx_core_075 = ((input_a >> 16) & 0x01) ^ ((input_a >> 17) & 0x01)
+  popcount18_tdlx_core_076 = ((input_a >> 16) & 0x01) & ((input_a >> 17) & 0x01)
+  popcount18_tdlx_core_077 = ((input_a >> 15) & 0x01) ^ ((popcount18_tdlx_core_075 >> 0) & 0x01)
+  popcount18_tdlx_core_078 = ((input_a >> 15) & 0x01) & ((popcount18_tdlx_core_075 >> 0) & 0x01)
+  popcount18_tdlx_core_079 = ((popcount18_tdlx_core_076 >> 0) & 0x01) | ((popcount18_tdlx_core_078 >> 0) & 0x01)
+  popcount18_tdlx_core_081 = ((popcount18_tdlx_core_073 >> 0) & 0x01) ^ ((popcount18_tdlx_core_077 >> 0) & 0x01)
+  popcount18_tdlx_core_082 = ((popcount18_tdlx_core_073 >> 0) & 0x01) & ((popcount18_tdlx_core_077 >> 0) & 0x01)
+  popcount18_tdlx_core_083 = ((popcount18_tdlx_core_074 >> 0) & 0x01) ^ ((popcount18_tdlx_core_079 >> 0) & 0x01)
+  popcount18_tdlx_core_084 = ((popcount18_tdlx_core_074 >> 0) & 0x01) & ((popcount18_tdlx_core_079 >> 0) & 0x01)
+  popcount18_tdlx_core_085 = ((popcount18_tdlx_core_083 >> 0) & 0x01) ^ ((popcount18_tdlx_core_082 >> 0) & 0x01)
+  popcount18_tdlx_core_086 = ((popcount18_tdlx_core_083 >> 0) & 0x01) & ((popcount18_tdlx_core_082 >> 0) & 0x01)
+  popcount18_tdlx_core_087 = ((popcount18_tdlx_core_084 >> 0) & 0x01) | ((popcount18_tdlx_core_086 >> 0) & 0x01)
+  popcount18_tdlx_core_090 = ~(((input_a >> 9) & 0x01) | ((input_a >> 6) & 0x01)) & 0x01
+  popcount18_tdlx_core_091 = ((input_a >> 1) & 0x01) & ((popcount18_tdlx_core_081 >> 0) & 0x01)
+  popcount18_tdlx_core_092 = ((popcount18_tdlx_core_070 >> 0) & 0x01) ^ ((popcount18_tdlx_core_085 >> 0) & 0x01)
+  popcount18_tdlx_core_093 = ((popcount18_tdlx_core_070 >> 0) & 0x01) & ((popcount18_tdlx_core_085 >> 0) & 0x01)
+  popcount18_tdlx_core_094 = ((popcount18_tdlx_core_092 >> 0) & 0x01) ^ ((popcount18_tdlx_core_091 >> 0) & 0x01)
+  popcount18_tdlx_core_095 = ((popcount18_tdlx_core_092 >> 0) & 0x01) & ((popcount18_tdlx_core_091 >> 0) & 0x01)
+  popcount18_tdlx_core_096 = ((popcount18_tdlx_core_093 >> 0) & 0x01) | ((popcount18_tdlx_core_095 >> 0) & 0x01)
+  popcount18_tdlx_core_097 = ((popcount18_tdlx_core_069 >> 0) & 0x01) ^ ((popcount18_tdlx_core_087 >> 0) & 0x01)
+  popcount18_tdlx_core_099 = ((popcount18_tdlx_core_097 >> 0) & 0x01) ^ ((popcount18_tdlx_core_096 >> 0) & 0x01)
+  popcount18_tdlx_core_100 = ((popcount18_tdlx_core_097 >> 0) & 0x01) & ((popcount18_tdlx_core_096 >> 0) & 0x01)
+  popcount18_tdlx_core_101 = ((popcount18_tdlx_core_069 >> 0) & 0x01) | ((popcount18_tdlx_core_100 >> 0) & 0x01)
+  popcount18_tdlx_core_103 = ((input_a >> 11) & 0x01) | ((input_a >> 6) & 0x01)
+  popcount18_tdlx_core_106 = ((popcount18_tdlx_core_052 >> 0) & 0x01) ^ ((popcount18_tdlx_core_094 >> 0) & 0x01)
+  popcount18_tdlx_core_107 = ((popcount18_tdlx_core_052 >> 0) & 0x01) & ((popcount18_tdlx_core_094 >> 0) & 0x01)
+  popcount18_tdlx_core_108 = ((popcount18_tdlx_core_106 >> 0) & 0x01) ^ ((popcount18_tdlx_core_048 >> 0) & 0x01)
+  popcount18_tdlx_core_109 = ((popcount18_tdlx_core_106 >> 0) & 0x01) & ((popcount18_tdlx_core_048 >> 0) & 0x01)
+  popcount18_tdlx_core_110 = ((popcount18_tdlx_core_107 >> 0) & 0x01) | ((popcount18_tdlx_core_109 >> 0) & 0x01)
+  popcount18_tdlx_core_111 = ((popcount18_tdlx_core_057 >> 0) & 0x01) ^ ((popcount18_tdlx_core_099 >> 0) & 0x01)
+  popcount18_tdlx_core_112 = ((popcount18_tdlx_core_057 >> 0) & 0x01) & ((popcount18_tdlx_core_099 >> 0) & 0x01)
+  popcount18_tdlx_core_113 = ((popcount18_tdlx_core_111 >> 0) & 0x01) ^ ((popcount18_tdlx_core_110 >> 0) & 0x01)
+  popcount18_tdlx_core_114 = ((popcount18_tdlx_core_111 >> 0) & 0x01) & ((popcount18_tdlx_core_110 >> 0) & 0x01)
+  popcount18_tdlx_core_115 = ((popcount18_tdlx_core_112 >> 0) & 0x01) | ((popcount18_tdlx_core_114 >> 0) & 0x01)
+  popcount18_tdlx_core_117_not = ~(((input_a >> 9) & 0x01)) & 0x01
+  popcount18_tdlx_core_118 = ((popcount18_tdlx_core_101 >> 0) & 0x01) | ((popcount18_tdlx_core_115 >> 0) & 0x01)
+  popcount18_tdlx_core_119 = ~(((input_a >> 12) & 0x01) & ((input_a >> 13) & 0x01)) & 0x01
+  popcount18_tdlx_core_121 = ~(((input_a >> 0) & 0x01) | ((input_a >> 7) & 0x01)) & 0x01
+  popcount18_tdlx_core_122 = ((input_a >> 11) & 0x01) | ((input_a >> 8) & 0x01)
+  popcount18_tdlx_core_123 = ~(((input_a >> 3) & 0x01) | ((input_a >> 0) & 0x01)) & 0x01
+  popcount18_tdlx_core_125 = ~(((input_a >> 0) & 0x01) & ((input_a >> 9) & 0x01)) & 0x01
+
+  popcount18_tdlx_out = 0
+  popcount18_tdlx_out = (popcount18_tdlx_out) | (((input_a >> 0) & 0x01) << 0)
+  popcount18_tdlx_out = (popcount18_tdlx_out) | (((popcount18_tdlx_core_108 >> 0) & 0x01) << 1)
+  popcount18_tdlx_out = (popcount18_tdlx_out) | (((popcount18_tdlx_core_113 >> 0) & 0x01) << 2)
+  popcount18_tdlx_out = (popcount18_tdlx_out) | (((popcount18_tdlx_core_118 >> 0) & 0x01) << 3)
+  popcount18_tdlx_out = (popcount18_tdlx_out) | ((0x00) << 4)
+  return popcount18_tdlx_out
